@@ -115,7 +115,7 @@
                                     <td colspan="5"><b><i>Tidak Ada Data</i></b></td>
                                 </tr>
                                 @endforelse
-                             </tbody>
+                            </tbody>
                         </table>
                     </div>
                     <hr>
@@ -153,7 +153,7 @@
                                     </li>
                                     <li class="dropdown-divider"></li>
                                     {{-- Diskon --}}
-                                     @php
+                                    @php
                                         $keseluruhanInvoice = $sTotal+$data->biaya_tambahan+$data->pajak;
                                         $diskon = $data->diskon;
                                         $totalDiskon = ($diskon/100)*$keseluruhanInvoice;

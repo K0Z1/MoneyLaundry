@@ -118,9 +118,7 @@
             $('#form-store-paket').text("Tambah Paket");
         }
 
-        /////////////////
-        // Update Data //
-        /////////////////
+        // Update Data
         $(function () {
 							$('#form-update form').on('submit', function (e) {
                 if (!e.isDefaultPrevented()) {
@@ -150,9 +148,7 @@
             });
         });
 
-        ///////////////
-        // Ubah Data //
-        /////////////
+        // Ubah Data
         function update(id) {
             save_method = "edit";
             $('input[name=_method]').val('PATCH');
@@ -182,9 +178,7 @@
             });
         }
 
-        /////////////////
-        // Hapus Data  //
-        /////////////////
+        // Hapus Data
         function destroy(id) {
             var csrf_token = $('meta[name="csrf-token"]').attr('content');
   

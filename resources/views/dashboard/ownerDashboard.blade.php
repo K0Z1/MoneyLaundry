@@ -9,41 +9,41 @@
 
 @section('content')
 <section class="row">
-   <div class="col-md-12">
+  <div class="col-md-12">
       <div class="card">
-         <div class="card-head">
+        <div class="card-head">
             <div class="card-header">
-               <h4 class="card-title">Laporan Bulan - {{ $bulan }}</h4>
-               <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
-               <div class="heading-elements">
+              <h4 class="card-title">Laporan Bulan - {{ $bulan }}</h4>
+              <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+              <div class="heading-elements">
                   <span class="badge badge-info">{{ $tanggal }}</span>
-               </div>
+              </div>
             </div>
-         </div>
-         <!-- project-info -->
-         <div id="project-info" class="card-body row">
+        </div>
+        <!-- project-info -->
+        <div id="project-info" class="card-body row">
             <div class="project-info-count col-lg-4 col-md-12">
-               <!-- Coming Soon! >_! -->
+              <!-- Coming Soon! >_! -->
             </div>
             <div class="project-info-count col-lg-4 col-md-12">
-               <div class="project-info-icon">
+              <div class="project-info-icon">
                   <h2>{{ $laporan }}</h2>
                   <div class="project-info-sub-icon">
-                     <span class="fa fa-calendar-check-o"></span>
+                    <span class="fa fa-calendar-check-o"></span>
                   </div>
-               </div>
-               <div class="project-info-text pt-1">
+              </div>
+              <div class="project-info-text pt-1">
                   <h5>Total Laporan</h5>
-               </div>
+              </div>
             </div>
             <div class="project-info-count col-lg-4 col-md-12">
-               <!-- Coming Soon! >_! -->
+              <!-- Coming Soon! >_! -->
             </div>
-         </div>
-         <!-- project-info -->
-         <div class="card-body">
+        </div>
+        <!-- project-info -->
+        <div class="card-body">
             <div class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1">
-               <span>Status Transaksi</span>
+              <span>Status Transaksi</span>
             </div>
             <div class="row grouped-multiple-statistics-card">
               <div class="col-12">
@@ -99,9 +99,9 @@
                 </div>
               </div>
             </div>
-         </div>
+        </div>
       </div>
-   </div>
+  </div>
 </section>
 @stop
 
@@ -111,13 +111,13 @@
 	
 	@if(Session::has('selamatdatang'))
 	<script>
-	    toastr.info('{{ auth()->user()->nama }}','Selamat Datang Kembali!');
+		toastr.info('{{ auth()->user()->nama }}','Selamat Datang Kembali!');
 	</script>
 	@endif
 
 	@if(Session::has('suksespw'))
 	<script>
-	    toastr.success('Password Berhasil Diperbharui','Sukses');
+		toastr.success('Password Berhasil Diperbharui','Sukses');
 	</script>
 	@endif
 @stop

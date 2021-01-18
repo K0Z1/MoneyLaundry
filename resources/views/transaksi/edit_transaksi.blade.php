@@ -40,25 +40,25 @@
             </div>
 
             <div class="form-group col-sm-12 col-md-2">
-               <label for="jenis">Jenis Cucian</label>
-               <select class="form-control" id="jenis">
+              <label for="jenis">Jenis Cucian</label>
+              <select class="form-control" id="jenis">
                   <option>-- Pilih Cucian --</option>
-                </select>
+              </select>
             </div>
 
             <div class="form-group col-sm-12 col-md-2">
-               <label for="jmlCucian" class="cursor-pointer">Jumlah Cucian</label>
-               <input type="number" class="form-control" name="qty" id="jmlCucian" placeholder="1" required>
+              <label for="jmlCucian" class="cursor-pointer">Jumlah Cucian</label>
+              <input type="number" class="form-control" name="qty" id="jmlCucian" placeholder="1" required>
             </div>
 
             <div class="form-group col-sm-12 col-md-2">
-               <label for="harga">Harga</label>
-               <p class="form-control-static" id="harga">Rp. 0</p>
+              <label for="harga">Harga</label>
+              <p class="form-control-static" id="harga">Rp. 0</p>
             </div>
 
             <div class="form-group col-sm-12 col-md-2">
-               <label for="keterangan">Keterangan</label>
-               <textarea name="keterangan" id="keterangan" rows="2" class="form-control"></textarea>
+              <label for="keterangan">Keterangan</label>
+              <textarea name="keterangan" id="keterangan" rows="2" class="form-control"></textarea>
             </div>
 
             <div class="form-group col-sm-12 col-md-2">
@@ -69,10 +69,10 @@
           </form>
         <!-- / -->
         <hr>
-         <!-- Table -->
+        <!-- Table -->
         <div class="row">
           <div class="col-12">
-             <div class="card">
+            <div class="card">
                 <div class="card-header">
                   Paket Yang Di Pesan
                 </div>
@@ -105,7 +105,7 @@
           <div class="col-12">
             <div class="card">
                 <div class="card-content">
-                 <form class="form" method="POST" action="{{ route('transaksi.update', $data->id) }}">
+                <form class="form" method="POST" action="{{ route('transaksi.update', $data->id) }}">
                   @csrf
                   {{ method_field('PATCH') }}
                   <div class="form-body">
@@ -168,7 +168,7 @@
                           <input type="number" class="form-control" id="biaya_tambahan" name="biaya_tambahan" placeholder="Biaya Tambahan" value="{{ $data->biaya_tambahan }}">
                       </div>
 
-                     <div class="col-sm-6 col-12 order-2 order-sm-1">
+                    <div class="col-sm-6 col-12 order-2 order-sm-1">
                           <label for="pajak">Pajak</label>
                           <input type="number" class="form-control" id="pajak" name="pajak" placeholder="Pajak" value="{{ $data->pajak }}">
                       </div>
@@ -242,22 +242,22 @@
 <script>
   jQuery(function () {
          // Custom Select Option
-         $(".select2").select2();
+        $(".select2").select2();
          // Cari Paket
-         var outlet_id = "{{ $data->outlet->id }}";
-         console.log(outlet_id);
+        var outlet_id = "{{ $data->outlet->id }}";
+        console.log(outlet_id);
 
-         $.get('/json/cari-paket/' + outlet_id,function(data) {
-           $('#paket').empty();
-           $('#paket').append('<option value="0" disable="true" selected="true">-- Pilih Paket --</option>');
+        $.get('/json/cari-paket/' + outlet_id,function(data) {
+          $('#paket').empty();
+          $('#paket').append('<option value="0" disable="true" selected="true">-- Pilih Paket --</option>');
 
-         $.each(data, function(index, paketObj){
-             $('#paket').append('<option value="'+ paketObj.nama_paket +'">'+ paketObj.nama_paket +'</option>');
-           })
-         });
+        $.each(data, function(index, paketObj){
+            $('#paket').append('<option value="'+ paketObj.nama_paket +'">'+ paketObj.nama_paket +'</option>');
+          })
+        });
 
          // Cari Jenis Paket
-         $('#paket').on('change', function(e){
+        $('#paket').on('change', function(e){
             var idPaket = "{{ $data->outlet->id }}";
             var namaPaket = e.target.value;
             
@@ -272,7 +272,7 @@
           });
 
          // Cari Harga
-         $('#jenis').on('change', function(e){
+        $('#jenis').on('change', function(e){
             console.log(e);
             var harga = e.target.value;
             
@@ -287,14 +287,14 @@
           });
 
          // Show Hide Elemen
-         $('.hideElmen').hide();
-             $("#dibayar").click(function() {
-           $('.hideElmen').show();
+        $('.hideElmen').hide();
+            $("#dibayar").click(function() {
+							$('.hideElmen').show();
           });
 
-         $("#belum_dibayar").click(function() {
-           $('.hideElmen').hide();
-         });
+        $("#belum_dibayar").click(function() {
+					$('.hideElmen').hide();
+        });
     });
 
       // Data Table
@@ -313,14 +313,12 @@
               ],
               "columnDefs": [
                   { "width": "5%", "targets": 0 }
-               ]
+              ]
           });
 
-        /////////////////
-        // Tambah Data //
-        /////////////////
+        // Tambah Data
         $(function () {
-             $('#tambahPaket').on('submit', function (e) {
+            $('#tambahPaket').on('submit', function (e) {
                 if (!e.isDefaultPrevented()) {
                     // Ajax
                     $.ajax({
@@ -347,9 +345,7 @@
             });
         });
 
-        /////////////////
-        // Hapus Paket  //
-        /////////////////
+        // Hapus Paket
         function destroy(id) {
             var csrf_token = $('meta[name="csrf-token"]').attr('content');
   

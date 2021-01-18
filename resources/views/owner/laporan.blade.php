@@ -48,21 +48,21 @@
                           </tr>
                         </thead>
                         <tbody>
-                         @forelse($laporan as $data)
-                         <tr>
-                           <td>{{ $loop->iteration }}</td>
-                           <td><a href="{{ route('transaksi.show',$data->id) }}">{{ $data->kode_invoice }}</a></td>
-                           <td>{{ $data->pelanggan->nama }}</td>
-                           <td>{{ $data->pelanggan->tlp }}</td>
-                           <td>{{ $data->outlet->nama }}</td>
-                           <td>{{ ucwords($data->status) }}</td>
-                           <td>{{ $data->tanggal() }}</td>
-                         </tr>
-                         @empty
-                         <tr>
-                           <td colspan="7"><i><b>Tidak Ada Data</b></i></td>
-                         </tr>
-                         @endforelse
+                        @forelse($laporan as $data)
+                        <tr>
+                          <td>{{ $loop->iteration }}</td>
+                          <td><a href="{{ route('transaksi.show',$data->id) }}">{{ $data->kode_invoice }}</a></td>
+                          <td>{{ $data->pelanggan->nama }}</td>
+                          <td>{{ $data->pelanggan->tlp }}</td>
+                          <td>{{ $data->outlet->nama }}</td>
+                          <td>{{ ucwords($data->status) }}</td>
+                          <td>{{ $data->tanggal() }}</td>
+                        </tr>
+                        @empty
+                        <tr>
+                          <td colspan="7"><i><b>Tidak Ada Data</b></i></td>
+                        </tr>
+                        @endforelse
                         </tbody>
                       </table>
                     </div>

@@ -59,7 +59,7 @@
                 <div class="row" id="hideElmen">
                   <div class="form-group col-md-6 mb-2">
                     <label for="tlp_pelanggan">Telpon Pelanggan</label>
-                     <input type="text" class="form-control" name="tlp_pelanggan" id="tlp_pelanggan" readonly="">
+										<input type="text" class="form-control" name="tlp_pelanggan" id="tlp_pelanggan" readonly="">
                   </div>
 
                   <div class="form-group col-md-6 mb-2">

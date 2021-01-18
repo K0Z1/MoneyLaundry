@@ -252,14 +252,12 @@ jQuery(function () {
               ],
               "columnDefs": [
                   { "width": "5%", "targets": 0 }
-               ]
+              ]
           });
 
-        /////////////////
-        // Tambah Data //
-        /////////////////
+        // Tambah Data
         $(function () {
-             $('#tambahPaket').on('submit', function (e) {
+            $('#tambahPaket').on('submit', function (e) {
                 if (!e.isDefaultPrevented()) {
                     // Ajax
                     $.ajax({
@@ -286,9 +284,7 @@ jQuery(function () {
             });
         });
 
-  		/////////////////
-        // Hapus Paket  //
-        /////////////////
+        // Hapus Paket
         function destroy(id) {
             var csrf_token = $('meta[name="csrf-token"]').attr('content');
   
@@ -327,17 +323,17 @@ jQuery(function () {
 
         // Invoice
         $('#biaya_tambahan').keyup(function() {
-        	var biayaTambahan = $('#biaya_tambahan').val();
+					var biayaTambahan = $('#biaya_tambahan').val();
             $('#biayaVal').text('Rp. '+ biayaTambahan +'');
         });
 
         $('#pajak').keyup(function() {
-        	var pajak = $('#pajak').val();
+					var pajak = $('#pajak').val();
             $('#pajakVal').text('Rp. '+ pajak +'');
         });
 
         $('#diskon').keyup(function() {
-        	var diskon = $('#diskon').val();
+					var diskon = $('#diskon').val();
             $('#diskonVal').text(''+ diskon +'%');
         });
 </script>

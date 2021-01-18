@@ -18,9 +18,9 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-            	<div class="float-right">
-                    <a href="#" onclick="tampilForm();" class="btn btn-sm btn-primary" style="height: 30px; padding: 8px;">Tambah Transaksi</a>
-            	</div>
+								<div class="float-right">
+											<a href="#" onclick="tampilForm();" class="btn btn-sm btn-primary" style="height: 30px; padding: 8px;">Tambah Transaksi</a>
+								</div>
                 <h4 class="card-title">Daftar Transaksi</h4>
             </div>
             <div class="card-content collapse show">
@@ -43,7 +43,7 @@
                         </thead>
                         <tbody>
                           
-                         </tbody>
+                        </tbody>
                       </table>
                     </div>
                   </div>
@@ -116,7 +116,7 @@
                 ],
                 "columnDefs": [
                     { "width": "5%", "targets": 0 }
-                 ]
+                ]
             });
 
         $(document).ready(function() {
@@ -160,7 +160,7 @@
         }
 
         $(function () {
-             $('#form-status form').on('submit', function (e) {
+            $('#form-status form').on('submit', function (e) {
                 if (!e.isDefaultPrevented()) {
                 var id = $('#id').val();
                 url = "/status/"+id+"/update";
@@ -188,19 +188,14 @@
             });
         });
 
-
-        /////////////////
-        // Tampil Form //
-        /////////////////
+        // Tampil Form
         function tampilForm() {
             $('#form-cu').modal('show');
             $('#form-cu form')[0].reset();
             $('#form-store-outlet').text("Tambah Data");
         }
 
-        /////////////////
-        // Hapus Data  //
-        /////////////////
+        // Hapus Data
         function destroy(id) {
             var csrf_token = $('meta[name="csrf-token"]').attr('content');
   

@@ -18,9 +18,9 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                	<div class="float-right">
-                        <button onclick="tampilForm();" class="btn btn-sm btn-primary" style="height: 30px;">Tambah Pelanggan</button>
-                	</div>
+										<div class="float-right">
+													<button onclick="tampilForm();" class="btn btn-sm btn-primary" style="height: 30px;">Tambah Pelanggan</button>
+										</div>
                     <h4 class="card-title">Data Pelanggan</h4>
                 </div>
                 <div class="card-content collapse show">
@@ -73,7 +73,7 @@
 
     <script>
         // Data Table
-    	var table = $('#data-pelanggan').DataTable({
+				var table = $('#data-pelanggan').DataTable({
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('json.pelanggan') }}",
@@ -90,9 +90,7 @@
                 ]
             });
 
-        /////////////////
-        // Tampil Form //
-        /////////////////
+        // Tampil Form
         function tampilForm() {
             save_method = "add";
             $('input[name=_method]').val('POST');
@@ -101,9 +99,7 @@
             $('#form-store-pelanggan').text("Tambah Pelanggan");
         }
 
-        /////////////////
-        // Tambah Data //
-        /////////////////
+        // Tambah Data
         $(function () {
             $('#form-cu form').on('submit', function (e) {
                 if (!e.isDefaultPrevented()) {
@@ -134,9 +130,7 @@
             });
         });
 
-        ///////////////
-        // Ubah Data //
-        /////////////
+        // Ubah Data
         function update(id) {
             save_method = "edit";
             $('input[name=_method]').val('PATCH');
@@ -169,9 +163,7 @@
             });
         }
 
-        /////////////////
-        // Hapus Data  //
-        /////////////////
+        // Hapus Data
         function destroy(id) {
             var csrf_token = $('meta[name="csrf-token"]').attr('content');
   

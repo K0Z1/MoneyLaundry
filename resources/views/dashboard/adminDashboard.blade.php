@@ -117,13 +117,13 @@
 	
 	@if(Session::has('selamatdatang'))
 	<script>
-	    toastr.info('{{ auth()->user()->nama }}','Selamat Datang Kembali!');
+		toastr.info('{{ auth()->user()->nama }}','Selamat Datang Kembali!');
 	</script>
 	@endif
 
 	@if(Session::has('suksespw'))
 	<script>
-	    toastr.success('Password Berhasil Diperbharui','Sukses');
+		toastr.success('Password Berhasil Diperbharui','Sukses');
 	</script>
 	@endif
 @stop

@@ -37,7 +37,7 @@
                             </thead>
                             <tbody>
 
-                             </tbody>
+                            </tbody>
                           </table>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
     
     <script>
         // Data Table
-    	var table = $('#data-pengguna').DataTable({
+				var table = $('#data-pengguna').DataTable({
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('json.pengguna') }}",
@@ -85,9 +85,7 @@
                 ]
             });
 
-        /////////////////
-        // Tampil Form //
-        /////////////////
+        // Tampil Form
         function tampilForm() {
             save_method = "add";
             $('input[name=_method]').val('POST');
@@ -97,9 +95,7 @@
             $('.hPass').show();
         }
 
-        /////////////////
-        // Tambah Data //
-        /////////////////
+        // Tambah Data
         $(function () {
             $('#form-cu form').on('submit', function (e) {
                 if (!e.isDefaultPrevented()) {
@@ -130,9 +126,7 @@
             });
         });
 
-        ///////////////
-        // Ubah Data //
-        /////////////
+        // Ubah Data
         function update(id) {
             save_method = "edit";
             $('input[name=_method]').val('PATCH');
@@ -164,9 +158,7 @@
             });
         }
 
-        /////////////////
-        // Hapus Data  //
-        /////////////////
+        // Hapus Data
         function destroy(id) {
             var csrf_token = $('meta[name="csrf-token"]').attr('content');
   

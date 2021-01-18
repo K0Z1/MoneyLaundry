@@ -18,9 +18,9 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                	<div class="float-right">
-                        <button onclick="tampilForm();" class="btn btn-sm btn-primary" style="height: 30px;">Tambah Outlet</button>
-                	</div>
+										<div class="float-right">
+													<button onclick="tampilForm();" class="btn btn-sm btn-primary" style="height: 30px;">Tambah Outlet</button>
+										</div>
                     <h4 class="card-title">Data Outlet</h4>
                 </div>
                 <div class="card-content collapse show">
@@ -67,7 +67,7 @@
     <script src="{{asset('app-assets/js/scripts/extensions/sweet-alerts.min.js')}}"></script>
     <script src="{{asset('app-assets/vendors/js/extensions/toastr.min.js')}}"></script>
     <script src="{{asset('app-assets/vendors/js/forms/select/select2.full.min.js')}}"></script>
-   
+
     <script>
         // Data Table
     	var table = $('#data-outlet').DataTable({
@@ -82,7 +82,7 @@
                 ],
                 "columnDefs": [
                     { "width": "5%", "targets": 0 }
-                 ]
+                ]
             });
     </script>
 @stop

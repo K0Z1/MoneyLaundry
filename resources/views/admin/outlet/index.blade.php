@@ -31,7 +31,6 @@
                               <tr>
                                 <th>No</th>
                                 <th>Nama Outlet</th>
-                                <!-- <th>Pemilik Outlet</th> -->
                                 <th>Telpon</th>
                                 <th>Alamat</th>
                                 <th>Opsi</th>

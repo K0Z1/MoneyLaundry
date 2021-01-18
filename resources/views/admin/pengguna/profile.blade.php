@@ -39,23 +39,23 @@
                             <div role="tabpanel" class="tab-pane active" id="account-vertical-general"
                                 aria-labelledby="account-pill-general" aria-expanded="true">
                                 
-					        <div class="col-12">
-					          <table class="table table-borderless">
-					            <tbody>
-					              <tr>
-					                <td>Nama Lengkap :</td>
-					                <td class="users-view-username">{{ $data->nama }}</td>
-					              </tr>
-					              <tr>
-					                <td>Username :</td>
-					                <td class="users-view-name">{{ $data->username }}</td>
-					              </tr>
-					              <tr>
-					                <td>Role :</td>
-					                <td class="users-view-email">{{ $data->role }}</td>
-					              </tr>
-					            </tbody>
-					          </table>
+																	<div class="col-12">
+																		<table class="table table-borderless">
+																			<tbody>
+																				<tr>
+																					<td>Nama Lengkap :</td>
+																					<td class="users-view-username">{{ $data->nama }}</td>
+																				</tr>
+																				<tr>
+																					<td>Username :</td>
+																					<td class="users-view-name">{{ $data->username }}</td>
+																				</tr>
+																				<tr>
+																					<td>Role :</td>
+																					<td class="users-view-email">{{ $data->role }}</td>
+																				</tr>
+																			</tbody>
+																		</table>
                               @if($totalTransaksi != '')
                               <div class="row rounded mb-2 mx-25 text-center text-lg-left">
                                   <div class="col-12 col-sm-4 p-2">
@@ -71,22 +71,22 @@
                               @else
                                   <h5 class="mb-1"><i class="icon-layers"></i> Data Outlet Kasir - {{ $data->nama }}</h5>
                               @endif
-					          <table class="table table-borderless">
-					            <tbody>
-                                  @forelse($outlet as $dataO)
-					              <tr>
-					                <td class="text-primary">{{ $dataO->nama }}</td>
-                                    <td>{{ $dataO->tlp }}</td>
-					                <td>{{ $dataO->alamat }}</td>
-					              </tr>
+																	<table class="table table-borderless">
+																		<tbody>
+																								@forelse($outlet as $dataO)
+																			<tr>
+																				<td class="text-primary">{{ $dataO->nama }}</td>
+																									<td>{{ $dataO->tlp }}</td>
+																				<td>{{ $dataO->alamat }}</td>
+																			</tr>
                                   @empty
                                   <tr>
                                     <td><b><i>Tidak Ada Data</i></b></td>
                                   </tr>
                                   @endforelse
-					            </tbody>
-					          </table>
-					        </div>
+													</tbody>
+												</table>
+											</div>
                             </div>
                             <div class="tab-pane fade" id="account-vertical-password" role="tabpanel"
                                 aria-labelledby="account-pill-password" aria-expanded="false">
