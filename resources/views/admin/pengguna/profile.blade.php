@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
- Profil {{ $data->nama }}
+	Profil {{ $data->nama }}
 @stop
 
 @section('css')
@@ -64,13 +64,13 @@
                                   <div class="col-12 col-sm-4 p-2">
                                     <h6 class="text-primary mb-0">Total Transaksi <br><span class="font-large-1 align-middle">{{ $totalTransaksi }}</span></h6>
                                   </div>
-                               </div>
-                               @endif
-                               @if($data->role == 'owner')
-    					          <h5 class="mb-1"><i class="icon-layers"></i> Data Outlet Yang Dimiliki - {{ $data->nama }}</h5>
-                               @else
+                              </div>
+                              @endif
+                              @if($data->role == 'owner')
+															<h5 class="mb-1"><i class="icon-layers"></i> Data Outlet Yang Dimiliki - {{ $data->nama }}</h5>
+                              @else
                                   <h5 class="mb-1"><i class="icon-layers"></i> Data Outlet Kasir - {{ $data->nama }}</h5>
-                               @endif
+                              @endif
 					          <table class="table table-borderless">
 					            <tbody>
                                   @forelse($outlet as $dataO)

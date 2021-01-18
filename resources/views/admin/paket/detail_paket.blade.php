@@ -22,7 +22,7 @@
 												<button onclick="tampilForm();" class="btn btn-sm btn-primary" style="height: 30px;">Tambah Paket</button>
 									</div>
 									<div class="float-left mr-2">
-												<a href="{{ url('/paket') }}"><i class="fa fa-arrow-left fa-fw"></i> Kembali</a>
+												<a href="{{ url('/paket') }}"><i class="icon-arrow-left"></i> Kembali</a>
 									</div>
                     <h4 class="card-title">Data Paket Cucian - {{ $data->nama }}</h4>
                 </div>

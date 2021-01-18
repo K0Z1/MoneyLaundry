@@ -29,7 +29,7 @@
                 <div class="row">
                   <div class="form-group col-md-6 mb-2">
                     <label for="outlet">Outlet</label>
-                     <select class="form-control select2" name="id_outlet" id="outlet" style="width: 100%;">
+										<select class="form-control select2" name="id_outlet" id="outlet" style="width: 100%;">
                           <optgroup label="Nama Outlet">
                               <option readonly value="0">-- Pilih Outlet --</option>
                               @forelse($outlet as $dataO)
@@ -38,7 +38,7 @@
                               <option disabled="">-- Tidak Ada Outlet --</option>
                               @endforelse
                           </optgroup>
-                      </select>
+                    </select>
                   </div>
 
                   <div class="form-group col-md-6 mb-2">
