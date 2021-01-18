@@ -111,7 +111,7 @@ Route::group(['middleware' => ['auth','checkRole:admin,kasir,owner']], function 
 	]);
 
 	// Outlet
-	Route::get('owner/outelt', [OutletController::class, 'owner'])->name('owner.outelt');
+	Route::get('owner/oulet', [OutletController::class, 'owner'])->name('owner.outlet');
 	Route::get('json/outlet/owner', [OutletController::class,'jsonOwner'])->name('json.outlet.owner');
 
 	// Laporan
@@ -119,7 +119,7 @@ Route::group(['middleware' => ['auth','checkRole:admin,kasir,owner']], function 
 	Route::post('laporan/cari', [LaporanController::class, 'cari'])->name('laporan.cari');
 
 	// Export
-	Route::get('laporan/export-excel', [LaporanController::class, 'xportExcel'])->name('export.excel');
+	Route::get('laporan/export-excel', [LaporanController::class, 'exportExcel'])->name('export.excel');
 	Route::get('laporan/export-pdf', [LaporanController::class, 'exportPdf'])->name('export.pdf');
 	
 	// Ganti Password
