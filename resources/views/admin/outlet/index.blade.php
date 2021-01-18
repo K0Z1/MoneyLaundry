@@ -175,41 +175,66 @@
 					})
 			}
 
-			// Edit Data
-			function update(id) {
-					save_method = "edit";
-					$('input[name=_method]').val('POST');
-					$('#form-tampil form')[0].reset();
+        // Edit Data
+        function update(id) {
+            // save_method = "edit";
+            $('input[name=_method]').val('PATCH');
+            $('#form-tampil form')[0].reset();
 
-					$.ajax({
-							url: "{{ url('outlet') }}" + '/' + id + '/edit',
-							type: "GET",
-							dataType: "JSON",
-							success: function (data) {
-									$('#form-tampil').modal('show');
-									$('.modal-title').text('Edit Outlet');
-									$(".btn-outline-primary").show();
+            $.ajax({
+                url: "{{ url('outlet') }}" + '/' + id + '/edit',
+                type: "GET",
+                dataType: "JSON",
+                success: function (data) {
+                    $('#form-tampil').modal('show');
+                    $('.modal-title').text('Edit Outlet');
+                    $(".btn-outline-primary").show();
 
-									// Enable Input
-									$("#tnamaOutlet").prop('disabled', false);
-									$("#tnoTelpon").prop('disabled', false);
-									$("#talamat").prop('disabled', false);
+                    // Enable Input
+                    $("#tnamaOutlet").prop('disabled', false);
+                    $("#tnoTelpon").prop('disabled', false);
+                    $("#talamat").prop('disabled', false);
 
-									$('#id').val(data.id);
-									$('#tnamaOutlet').val(data.nama);
-									$('#tnoTelpon').val(data.tlp);
-									$('#talamat').val(data.alamat);
-							},
-							error : function () {
-									Swal.fire(
-										'Opps!',
-										'Terjadi Error...!',
-										'error',
-										'1500'
-									)
-							}
-					});
-			}
+                    $('#id').val(data.id);
+                    $('#tnamaOutlet').val(data.nama);
+                    $('#tnoTelpon').val(data.tlp);
+                    $('#talamat').val(data.alamat);
+                },
+                error : function () {
+                    Swal.fire(
+                      'Opps!',
+                      'Terjadi Error...!',
+                      'error',
+                      '1500'
+                    )
+                }
+            });
+        }
+
+        // Update Data Dengan Form Tampil
+        $(function () {
+            $('#form-tampil form').on('submit', function (e) {
+                if (!e.isDefaultPrevented()) {
+                var id = $('#id').val();
+                    url = "outlet/" + id + "/update";
+
+                    $.ajax({
+                        url: url,
+                        type: "PATCH",
+                        data: $("#form-tampil form").serialize(),
+                        success: function($data) {
+                            $("#form-tampil").modal('hide');
+                            table.ajax.reload();
+                            toastr.success('Data Berhasil Diperbharui','Sukses');
+                        },
+                        error: function () {
+                            alert("Opps! Error...!");
+                        }
+                    });
+                    return false;
+                }
+            });
+        });
 
         // Hapus Data
         function destroy(id) {

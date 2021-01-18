@@ -48,7 +48,7 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function (){
 	// Outlet
 	Route::resource('outlet', OutletController::class);
 	Route::get('json/outlet', [OutletController::class, 'json'])->name('json.outlet');
-	Route::patch('outlet/outlet/{id}/update', [OutletController::class, 'update']);
+	Route::patch('outlet/{id}/update', [OutletController::class, 'update']);
 
 	// Paket/Cucian
 	Route::resource('paket', PaketController::class);

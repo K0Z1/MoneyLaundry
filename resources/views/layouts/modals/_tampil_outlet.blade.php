@@ -7,9 +7,9 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-        <form method="POST" novalidate>
+        <form method="POST">
 					@csrf
-					{{ method_field('POST') }}
+					{{ method_field('PATCH') }}
           <div class="modal-body">
                 <input type="hidden" id="id" name="id">
                 <div class="row">
