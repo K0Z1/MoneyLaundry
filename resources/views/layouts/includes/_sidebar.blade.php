@@ -88,17 +88,17 @@
 					<span class="menu-title" data-i18n="Dashboard">Dashboard</span>
 				</a>
       </li>
-      <li class="nav-item {{ request()->routeIs('outlet.*') ? 'active' : '' }}">
-            <a href="{{ route('owner.outlet') }}">
-                  <i class="icon-layers"></i>
-                  <span class="menu-title" data-i18n="Data Outlet">Data Outlet</span>
-            </a>
+      <li class="nav-item {{ request()->routeIs('owner.*') ? 'active' : '' }}">
+				<a href="{{ route('owner.outlet') }}">
+					<i class="icon-layers"></i>
+					<span class="menu-title" data-i18n="Data Outlet">Data Outlet</span>
+				</a>
       </li>
       <li class="nav-item {{ request()->routeIs('laporan.*') ? 'active' : '' }}">
-            <a href="{{ route('laporan.owner') }}">
-                  <i class="icon-notebook"></i>
-                  <span class="menu-title" data-i18n="Laporan">Laporan</span>
-            </a>
+				<a href="{{ route('laporan.owner') }}">
+					<i class="icon-notebook"></i>
+					<span class="menu-title" data-i18n="Laporan">Laporan</span>
+				</a>
       </li>
       @endif
     </ul>

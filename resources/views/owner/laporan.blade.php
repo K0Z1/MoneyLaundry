@@ -13,23 +13,23 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-            	<div class="float-right ml-1">
-            		<button onclick="tampilForm();" class="btn btn-block btn-primary glow"><i class="fa fa-search pr-1"></i> Cari</button>
-            	</div>
-            	<div class="float-right">
-                    <div class="btn-group">
-		              <button class="btn btn-primary" style="height: 40px;" type="button"><i class="fa fa-file-o pr-1"></i> Export</button>
-		              <button class="btn btn-primary dropdown-toggle" style="height: 40px;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Export</span></button>
-		              <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(113px, 41px, 0px);">
-		              	<a class="dropdown-item" href="{{ route('export.excel') }}">Excel</a>
-		              	<a class="dropdown-item" href="{{ route('export.pdf') }}">PDF</a>
-                    <!-- <div class="dropdown-divider"></div>
-		              	<a class="dropdown-item" href="#">Print</a> 
-                    Coming Soon! >_!
-                    -->
-		              </div>
-		            </div>
-            	</div>
+								<div class="float-right ml-1">
+									<button onclick="tampilForm();" class="btn btn-block btn-primary glow"><i class="fa fa-search pr-1"></i> Cari</button>
+								</div>
+								<div class="float-right">
+											<div class="btn-group">
+										<button class="btn btn-primary" style="height: 40px; pointer-events: none;" type="button"><i class="fa fa-file-o pr-1"></i> Export</button>
+										<button class="btn btn-primary dropdown-toggle" style="height: 40px;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Export</span></button>
+										<div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(113px, 41px, 0px);">
+											<a class="dropdown-item" href="{{ route('export.excel') }}">Excel</a>
+											<a class="dropdown-item" href="{{ route('export.pdf') }}">PDF</a>
+											<!-- <div class="dropdown-divider"></div>
+											<a class="dropdown-item" href="#">Print</a> 
+											Coming Soon! >_!
+											-->
+										</div>
+									</div>
+								</div>
                 <h4 class="card-title">Laporan</h4>
             </div>
             <div class="card-content collapse show">

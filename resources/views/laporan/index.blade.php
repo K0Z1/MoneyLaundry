@@ -18,7 +18,7 @@
 							</div>
 							<div class="float-right">
 										<div class="btn-group">
-									<button class="btn btn-primary" style="height: 40px; pointer-events: none;" type="button" disabled><i class="fa fa-file-o pr-1"></i> Export</button>
+									<button class="btn btn-primary" style="height: 40px; pointer-events: none;" type="button"><i class="fa fa-file-o pr-1"></i> Export</button>
 									<button class="btn btn-primary dropdown-toggle" style="height: 40px;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Export</span></button>
 									<div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(113px, 41px, 0px);">
 										<a class="dropdown-item" href="{{ route('export.excel') }}">Excel</a>

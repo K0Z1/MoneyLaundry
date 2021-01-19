@@ -111,7 +111,7 @@ Route::group(['middleware' => ['auth','checkRole:admin,kasir,owner']], function 
 	]);
 
 	// Outlet
-	Route::get('owner/oulet', [OutletController::class, 'owner'])->name('owner.outlet');
+	Route::get('owner/outlet', [OutletController::class, 'owner'])->name('owner.outlet');
 	Route::get('json/outlet/owner', [OutletController::class,'jsonOwner'])->name('json.outlet.owner');
 
 	// Laporan

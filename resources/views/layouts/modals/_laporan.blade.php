@@ -9,6 +9,7 @@
       </div>
         <form method="POST" action="{{ route('laporan.cari') }}" novalidate>
           @csrf
+					{{ method_field('POST') }}
           <div class="modal-body">
 						<div class="row">
 							<div class="col-md-6">
