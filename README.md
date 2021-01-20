@@ -8,20 +8,18 @@
 4. PHP versi ^7.3 atau ^8.0
 5. Internet
 
-
 ## Installation
 
 1. Buka Command Prompt / Terminal
 2. Pilih directory penyimpanan pada Command Prompt / Terminal contoh:
    - Di macOS
-     ```bash
-      cd /Applications/XAMPP/xamppfiles/htdocs
-     ```
+    ```bash
+    cd /Applications/XAMPP/xamppfiles/htdocs
+    ```
    - Di Windows
-     ```bash
-     cd C:/xampp/htdocs
-     ```
-
+    ```bash
+    cd C:/xampp/htdocs
+    ```
 3. Jalankan perintah di Command Prompt / Terminal
 ```bash
 git clone https://github.com/K0Z1/MoneyLaundry.git
