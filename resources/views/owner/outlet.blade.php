@@ -47,7 +47,8 @@
     </div>
 
     <!-- Modal Store -->
-    @include('layouts.modals._tampil_outlet')
+    @include('layouts.modals._outlet')
+
 @stop
 
 @section('footer')
@@ -70,7 +71,7 @@
 
     <script>
         // Data Table
-    	var table = $('#data-outlet').DataTable({
+				var table = $('#data-outlet').DataTable({
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('json.outlet.owner') }}",
@@ -84,5 +85,46 @@
                     { "width": "5%", "targets": 0 }
                 ]
             });
+
+			// Tampil Form
+			function tampilForm() {
+					save_method = "add";
+					$('input[name=_method]').val('POST');
+					$('#form-cu').modal('show');
+					$('#form-cu form')[0].reset();
+					$('#form-store-outlet').text("Tambah Outlet");
+					$(".btn-outline-primary").show();
+			}
+
+			// Tambah Data
+			$(function () {
+					$('#form-cu form').on('submit', function (e) {
+							if (!e.isDefaultPrevented()) {
+							var id = $('#id').val();
+							if (save_method == 'add') url = "{{ url('outlet') }}";
+							else url = "{{ url('outlet') . '/' }}" + id;
+
+									$.ajax({
+											url: url,
+											type: "POST",
+											data: $("#form-cu form").serialize(),
+											success: function($data) {
+													$("#form-cu").modal('hide');
+													table.ajax.reload();
+													
+													if (save_method == 'add') {
+															toastr.success('Data Berhasil Ditambahkan','Sukses');
+													} else {
+															toastr.success('Data Berhasil Diperbarui','Sukses');
+													}
+											},
+											error: function () {
+													alert("Opps! Error...!");
+											}
+									});
+									return false;
+							}
+					});
+			});
     </script>
 @stop

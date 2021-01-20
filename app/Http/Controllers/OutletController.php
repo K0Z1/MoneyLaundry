@@ -155,8 +155,11 @@ class OutletController extends Controller
             ->toJson();
     }
 
-    public function owner()
+		public function owner()
     {
-        return view('owner.outlet');
+				$owner = User::where('role', 'owner')->orderBy('nama', 'ASC')->get();
+        $kasir = User::where('role', 'kasir')->orderBy('nama', 'ASC')->get();
+
+				return view('owner.outlet', compact('owner','kasir'));
     }
 }

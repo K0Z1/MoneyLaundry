@@ -71,6 +71,7 @@
         </div>
     </div>
 </div>
+
 <!-- Include -->
 @include('layouts.modals._laporan')
 @stop

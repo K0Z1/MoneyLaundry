@@ -38,7 +38,7 @@ Route::get('logout', [
 	'as' => 'logout'
 ]);
 
-Route::group(['middleware' => ['auth','checkRole:admin']], function (){
+Route::group(['middleware' => ['auth','checkRole:admin,owner']], function (){
 	// Dashboard Admin
 	Route::get('admin/dashboard', [
 		'uses' => 'App\Http\Controllers\DashboardController@admin',
@@ -70,7 +70,7 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function (){
 	Route::get('/coba/dynamic', [TransaksiController::class, 'coba'])->name('coba');	
 });
 
-Route::group(['middleware' => ['auth','checkRole:admin,kasir']], function (){
+Route::group(['middleware' => ['auth','checkRole:admin,kasir,owner']], function (){
 	// Dashboard Kasir
 	Route::get('kasir/dashboard', [
 		'uses' => 'App\Http\Controllers\DashboardController@kasir',

@@ -88,7 +88,7 @@
 					<span class="menu-title" data-i18n="Dashboard">Dashboard</span>
 				</a>
       </li>
-      <li class="nav-item {{ request()->routeIs('owner.*') ? 'active' : '' }}">
+      <li class="nav-item {{ request()->routeIs('outlet.*') ? 'active' : '' }}">
 				<a href="{{ route('owner.outlet') }}">
 					<i class="icon-layers"></i>
 					<span class="menu-title" data-i18n="Data Outlet">Data Outlet</span>
